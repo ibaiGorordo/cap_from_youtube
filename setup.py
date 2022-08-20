@@ -7,7 +7,7 @@ long_description = (this_directory / "README.md").read_text()
 
 setup(
     name='cap_from_youtube',
-    version='0.0.8',
+    version='0.0.9',
     license='MIT',
     description='Get an OpenCV video capture from an YouTube video URL',
     long_description=long_description,
