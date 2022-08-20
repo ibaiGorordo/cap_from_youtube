@@ -1,9 +1,9 @@
 # cap_from_youtube
  Get an OpenCV video capture from an YouTube video URL
 
-
+[![PyPI](https://img.shields.io/pypi/v/cap-from-youtube?color=2BAF2B)](https://pypi.org/project/cap-from-youtube/)
 <p align="center">
-  <img src="https://github.com/ibaiGorordo/cap_from_youtube/blob/main/doc/img/cap_from_youtube_logo.png" />
+  <img src="https://raw.githubusercontent.com/ibaiGorordo/cap_from_youtube/main/doc/img/cap_from_youtube_logo.png" />
 </p>
 
 # Why
