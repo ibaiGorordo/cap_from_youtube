@@ -1,6 +1,11 @@
 # cap_from_youtube
  Get an OpenCV video capture from an YouTube video URL
 
+
+<p align="center">
+  <img src="https://github.com/ibaiGorordo/cap_from_youtube/blob/main/doc/img/cap_from_youtube_logo.png" />
+</p>
+
 # Why
 - pafy is widely used to get the video URL from a YouTube video URL, but since it uses youtube-dl which has not been updated recently, it suffers from some issues.
 - This repository is a simplified version of what pafy does, by just getting the url of the video and creating an OpenCV video capture from it.
