@@ -7,9 +7,9 @@
 </p>
 
 # Why
-- pafy is widely used to get the video URL from a YouTube video URL, but since it uses youtube-dl which has not been updated recently, it suffers from some issues.
+- pafy is widely used to get the video URL from a YouTube video URL, but since it uses youtube-dl which has not been updated recently, it suffers from some issues (dislike_count not found...).
 - This repository is a simplified version of what pafy does, by just getting the url of the video and creating an OpenCV video capture from it.
-- It uses YT-DLP (https://github.com/yt-dlp/yt-dlp), which is a form of youtube-dl that is updated frequently.
+- It uses YT-DLP (https://github.com/yt-dlp/yt-dlp), which is a fork of youtube-dl that is updated frequently.
 
 # Requirement
 * YT-DLP
