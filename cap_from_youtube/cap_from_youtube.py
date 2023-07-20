@@ -32,7 +32,7 @@ def list_video_streams(url):
 
         streams = [VideoStream(format)
                    for format in info['formats'][::-1]
-                   if format['vcodec'] != 'none']
+                   if format['vcodec'] != 'none' and 'format_note' in format]
         _, unique_indices = np.unique(np.array([stream.resolution
                                                 for stream in streams]), return_index=True)
         streams = [streams[index] for index in np.sort(unique_indices)]
@@ -73,6 +73,8 @@ if __name__ == '__main__':
 
     _, resolutions = list_video_streams(youtube_url)
     resolutions = np.append(resolutions, 'best')
+
+    print(resolutions)
     for vid_res in resolutions:
         cap = cap_from_youtube(youtube_url, vid_res)
         test_video(cap, vid_res)
