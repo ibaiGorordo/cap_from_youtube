@@ -4,6 +4,7 @@ import yt_dlp
 import numpy as np
 import cv2
 
+valid_resolutions = ['144p', '240p', '360p', '480p', '720p', '720p60', '1080p', '1080p60']
 
 @dataclass
 class VideoStream:
@@ -30,9 +31,8 @@ def list_video_streams(url):
     with yt_dlp.YoutubeDL(ydl_opts) as ydl:
         info = ydl.extract_info(url, download=False)
 
-        streams = [VideoStream(format)
-                   for format in info['formats'][::-1]
-                   if format['vcodec'] != 'none' and 'format_note' in format]
+        filter = lambda x: x['vcodec'] != 'none' and 'format_note' in x and x['format_note'] in valid_resolutions
+        streams = [VideoStream(format) for format in info['formats'][::-1] if filter(format)]
         _, unique_indices = np.unique(np.array([stream.resolution
                                                 for stream in streams]), return_index=True)
         streams = [streams[index] for index in np.sort(unique_indices)]
