@@ -35,7 +35,7 @@ pip install git+https://github.com/ibaiGorordo/cap_from_youtube
 - It requires the video URL as input and returns a `cv2.VideoCapture` object.
 - By default, it returns the video with the highest resolution available.
 - You can specify the resolution you want to get with the `resolution` parameter.
-  - Resolution examples: '144p', '240p', '360p', '480p', '720p', '1080p', '1440p', '2160p', 'best'
+  - Available resolutions: '144p', '240p', '360p', '480p', '720p', '720p60', '1080p', '1080p60', 'best'
 - Example:
 
 ```python
@@ -43,7 +43,7 @@ import cv2
 from cap_from_youtube import cap_from_youtube
 
 youtube_url = 'https://youtu.be/LXb3EKWsInQ'
-cap = cap_from_youtube(youtube_url, '1440p60')
+cap = cap_from_youtube(youtube_url, '1080p60')
 
 cv2.namedWindow('video', cv2.WINDOW_NORMAL)
 while True:
