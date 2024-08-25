@@ -7,7 +7,7 @@ long_description = (this_directory / "README.md").read_text()
 
 setup(
     name='cap_from_youtube',
-    version='0.0.9',
+    version='0.1.0',
     license='MIT',
     description='Get an OpenCV video capture from an YouTube video URL',
     long_description=long_description,
@@ -16,8 +16,7 @@ setup(
     url='https://github.com/ibaiGorordo/cap_from_youtube',
     packages=find_packages(),
     install_requires=[
-        'numpy',
-        'opencv-python',
+        "opencv-python>=4.10.0.82",
         'yt_dlp',
     ],
 )
