@@ -39,11 +39,13 @@ pip install git+https://github.com/ibaiGorordo/cap_from_youtube
 - Example:
 
 ```python
+from datetime import timedelta
 import cv2
 from cap_from_youtube import cap_from_youtube
 
 youtube_url = 'https://youtu.be/LXb3EKWsInQ'
-cap = cap_from_youtube(youtube_url, '1080p60')
+start_time = timedelta(seconds=5)
+cap = cap_from_youtube(youtube_url, 'best', start=start_time)
 
 cv2.namedWindow('video', cv2.WINDOW_NORMAL)
 while True:
