@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cap_from_youtube"
+version = "0.2.0"
+description = "Get an OpenCV video capture from an YouTube video URL"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+    {name = "Ibai Gorordo"}
+]
+dependencies = [
+    "yt_dlp",
+    "opencv-python",
+]
+
+[tool.setuptools.packages.find]
+include = ["cap_from_youtube"]
+
+[project.urls]
+Homepage = "https://github.com/ibaiGorordo/cap_from_youtube"
